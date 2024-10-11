@@ -44,21 +44,21 @@ def truncate_string(text, max_len, name):
     return rv
 
 
-def print_spell(name, level, school, range, casting_time, duration, components,
+def print_spell(name, level, school, range, casting_time, duration, components, classes,
                  text, source=None, **kwargs):
     global SPELLS_TOTAL
     header = LEVEL_STRING[level].format(
         school=school.lower()).strip()
     joinedComponents = ", ".join(components)
+    joinedClasses = '(%s)' % ", ".join(classes)
 
     header += ', %s' % source
     new_text = truncate_string(text, MAX_TEXT_LENGTH - len(joinedComponents), name)
 
-
     SPELLS_TOTAL += 1
 
-    print("\\begin{spell}{%s}{%s}{%s}{%s}{%s}{%s}\n\n%s\n\n\\end{spell}\n" %
-        (name, header, range, casting_time, duration, joinedComponents, textwrap.fill(new_text, 80)))
+    print("\\begin{spell}{%s}{%s}{%s}{%s}{%s}{%s}{%s}\n\n%s\n\n\\end{spell}\n" %
+        (name, header, range, casting_time, duration, joinedComponents, joinedClasses, textwrap.fill(new_text, 80)))
 
 
 def get_spells(classes=None, levels=None, schools=None, names=None):

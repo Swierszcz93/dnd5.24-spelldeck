@@ -2,7 +2,7 @@
 \usepackage{ifxetex}
 \usepackage{fancyhdr}
 \usepackage{background}
-\usepackage[paperheight=8.89cm,paperwidth=6.35cm,margin=0.6cm,top=17mm,bottom=6mm,headheight=1cm]{geometry}
+\usepackage[paperheight=8.89cm,paperwidth=6.35cm,margin=0.6cm,top=19mm,bottom=6mm,headheight=1cm]{geometry}
 
 \backgroundsetup{
     contents={\includegraphics[width=\paperwidth,height=\paperheight]{images/background}}
@@ -19,7 +19,7 @@
 \sloppy
 \setlength{\headsep}{3mm}
 \pagestyle{fancy}
-\chead{\scshape\tiny\spellheader\\[-1mm]\large\color{headercolor}\mbox{\spelltitle}}
+\chead{\scshape\tiny\spellheader\\[0mm]\scshape\tiny\classes\\[-1mm]\large\color{headercolor}\mbox{\spelltitle}}
 \cfoot{}
 \setlength{\parindent}{0pt}
 
@@ -30,6 +30,7 @@
     \def\casttime{#4}
     \def\duration{#5}
     \def\components{#6}
+    \def\classes{#7}
     \begin{minipage}[t][5cm][t]{\textwidth}
     \vspace{-5mm}
     \begin{minipage}[t]{0.49\textwidth}

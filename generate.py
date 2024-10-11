@@ -44,13 +44,11 @@ def truncate_string(text, max_len, name):
 
 
 def print_spell(name, level, school, range, casting_time, duration, components,
-                 text, source=None, source_page=None, **kwargs):
+                 text, source=None, **kwargs):
     global SPELLS_TOTAL
     header = LEVEL_STRING[level].format(
         school=school.lower()).strip()
     joinedComponents = ", ".join(components)
-    if source_page is not None:
-        source += ' page %d' % source_page
 
     header += ', %s' % source
     new_text = truncate_string(text, MAX_TEXT_LENGTH - len(joinedComponents), name)

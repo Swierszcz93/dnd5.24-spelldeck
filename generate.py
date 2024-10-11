@@ -31,6 +31,7 @@ with open('data/spells.json') as json_data:
 def truncate_string(text, max_len, name):
     global SPELLS_TRUNCATED, TRUNKATED_NAMES
     #zmienic zeby za kazde 30 znakow w compnentach ucinac linie w opisie test - Astral Projection
+    # i ogolnie popracowac nad tym wyswietlanime w roznych kombinacjach
     full_lines = text[:max_len].count("\n\n")
     max_len -= full_lines * 50
     rv = text[:max_len] + (text[max_len-30:] and ' [MORE ABOUT SPELL IN BOOK]')

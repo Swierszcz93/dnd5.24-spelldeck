@@ -2,7 +2,7 @@
 \usepackage{ifxetex}
 \usepackage{fancyhdr}
 \usepackage{background}
-\usepackage[paperheight=8.89cm,paperwidth=6.35cm,margin=0.6cm,top=22mm,bottom=10mm,headheight=1cm]{geometry}
+\usepackage[paperheight=8.89cm,paperwidth=6.35cm,margin=0.6cm,top=17mm,bottom=6mm,headheight=1cm]{geometry}
 
 \backgroundsetup{
     contents={\includegraphics[width=\paperwidth,height=\paperheight]{images/background}}
@@ -19,8 +19,8 @@
 \sloppy
 \setlength{\headsep}{3mm}
 \pagestyle{fancy}
-\chead{\scshape\scriptsize\spellheader\\[-1.8mm]\Large\color{headercolor}\mbox{\spelltitle}}
-\cfoot{\if\relax\spellsource\relax\else\scriptsize\spellsource\fi}
+\chead{\scshape\tiny\spellheader\\[-1mm]\large\color{headercolor}\mbox{\spelltitle}}
+\cfoot{}
 \setlength{\parindent}{0pt}
 
 \newenvironment{spell}[7]{
@@ -30,35 +30,34 @@
     \def\casttime{#4}
     \def\duration{#5}
     \def\components{#6}
-    \def\spellsource{#7}
     \begin{minipage}[t][5cm][t]{\textwidth}
-    \vspace{-3mm}
+    \vspace{-5mm}
     \begin{minipage}[t]{0.49\textwidth}
-        \centering\footnotesize\scshape{\color{headercolor}Casting time}
+        \centering\scriptsize\scshape{\color{headercolor}Casting time}
 
-        \casttime
+        \tiny\casttime
 	\end{minipage}
     \hfill
     \begin{minipage}[t]{0.49\textwidth}
-        \centering\footnotesize\scshape{\color{headercolor}Range}
+        \centering\scriptsize\scshape{\color{headercolor}Range}
 
-        \castrange
-	\end{minipage}\\[3mm]
+        \tiny\castrange
+	\end{minipage}\\[1mm]
     \begin{minipage}[t]{0.49\textwidth}
-        \centering\footnotesize\scshape{\color{headercolor}Components}
+        \centering\scriptsize\scshape{\color{headercolor}Components}
 
-        \components
+        \tiny\components
 	\end{minipage}
     \hfill
     \begin{minipage}[t]{0.49\textwidth}
-        \centering\footnotesize\scshape{\color{headercolor}Duration}
+        \centering\scriptsize\scshape{\color{headercolor}Duration}
 
-        \duration
+        \tiny\duration
 	\end{minipage}
-    \vspace{3mm}
+    \vspace{1mm}
     \headrule
-    \vspace{3mm}
-    \footnotesize
+    \vspace{1mm}
+    \scriptsize
 }{
     \end{minipage}
     \newpage

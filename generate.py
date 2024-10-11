@@ -5,62 +5,61 @@ import sys
 import textwrap
 import json
 
-MAX_TEXT_LENGTH = 600
+MAX_TEXT_LENGTH = 900
 
 SPELLS_TRUNCATED = 0
 SPELLS_TOTAL = 0
+TRUNKATED_NAMES = ''
 
 LEVEL_STRING = {
-    0: '{school} cantrip {ritual}',
-    1: '1st level {school} {ritual}',
-    2: '2nd level {school} {ritual}',
-    3: '3rd level {school} {ritual}',
-    4: '4th level {school} {ritual}',
-    5: '5th level {school} {ritual}',
-    6: '6th level {school} {ritual}',
-    7: '7th level {school} {ritual}',
-    8: '8th level {school} {ritual}',
-    9: '9th level {school} {ritual}',
+    0: 'Cantrip {school}',
+    1: '1st level {school}',
+    2: '2nd level {school}',
+    3: '3rd level {school}',
+    4: '4th level {school}',
+    5: '5th level {school}',
+    6: '6th level {school}',
+    7: '7th level {school}',
+    8: '8th level {school}',
+    9: '9th level {school}',
 }
 
 with open('data/spells.json') as json_data:
     SPELLS = json.load(json_data)
 
 
-def truncate_string(string, max_len=MAX_TEXT_LENGTH):
-    rv = ""
+def truncate_string(text, max_len, name):
+    global SPELLS_TRUNCATED, TRUNKATED_NAMES
+    #zmienic zeby za kazde 30 znakow w compnentach ucinac linie w opisie test - Astral Projection
+    full_lines = text[:max_len].count("\n\n")
+    max_len -= full_lines * 50
+    rv = text[:max_len] + (text[max_len-30:] and ' [MORE ABOUT SPELL IN BOOK]')
 
-    for sentence in string.split(".")[:-1]:
-        if len(rv + sentence) < MAX_TEXT_LENGTH - 2:
-            rv += sentence + "."
-        else:
-            rv += ".."
-            break
+    if rv != text:
+        SPELLS_TRUNCATED += 1
+        TRUNKATED_NAMES += '\n %s' %name
+    rv = rv.replace("\n","\\\\")
 
     return rv
 
 
-def print_spell(name, level, school, range, time, ritual, duration, components,
-                material, text, source=None, source_page=None, **kwargs):
-    global SPELLS_TRUNCATED, SPELLS_TOTAL
+def print_spell(name, level, school, range, casting_time, duration, components,
+                 text, source=None, source_page=None, **kwargs):
+    global SPELLS_TOTAL
     header = LEVEL_STRING[level].format(
-        school=school.lower(), ritual='ritual' if ritual else '').strip()
-
-    if material is not None:
-        text = "Requires " + material + ". " + text
-
+        school=school.lower()).strip()
+    joinedComponents = ", ".join(components)
     if source_page is not None:
         source += ' page %d' % source_page
 
-    new_text = truncate_string(text)
+    header += ', %s' % source
+    new_text = truncate_string(text, MAX_TEXT_LENGTH - len(joinedComponents), name)
 
-    if new_text != text:
-        SPELLS_TRUNCATED += 1
 
     SPELLS_TOTAL += 1
 
-    print("\\begin{spell}{%s}{%s}{%s}{%s}{%s}{%s}{%s}\n\n%s\n\n\\end{spell}\n" %
-        (name, header, range, time, duration, ", ".join(components), source or '', textwrap.fill(new_text, 80)))
+    print("\\begin{spell}{%s}{%s}{%s}{%s}{%s}{%s}\n\n%s\n\n\\end{spell}\n" %
+        (name, header, range, casting_time, duration, joinedComponents, textwrap.fill(new_text, 80)))
 
 
 def get_spells(classes=None, levels=None, schools=None, names=None):
@@ -117,3 +116,4 @@ if __name__ == '__main__':
         print_spell(name, **spell)
 
     print('Had to truncate %d out of %d spells at %d characters.' % (SPELLS_TRUNCATED, SPELLS_TOTAL, MAX_TEXT_LENGTH), file=sys.stderr)
+    #print('Trunkated spell names: %s' % (TRUNKATED_NAMES), file=sys.stderr)

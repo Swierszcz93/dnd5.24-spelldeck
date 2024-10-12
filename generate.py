@@ -39,10 +39,21 @@ def truncate_string(text, max_len, name):
     if rv != text:
         SPELLS_TRUNCATED += 1
         TRUNKATED_NAMES += '\n %s' %name
-    rv = rv.replace("\n","\\\\")
 
+    rv = replace_text(rv)
     return rv
 
+def replace_text(text):
+    splittedText = text.split("\n")
+    newText = splittedText[0]
+    for subText in splittedText[1:]:
+        position = subText.find(".")
+        if position > 0 and position < 32:
+            subText = "\\textbf{" + subText[:position+1] + '}' + subText[position+1:]
+        newText += "\n" + subText
+
+    newText = newText.replace("\n","\\\\")
+    return newText
 
 def print_spell(name, level, school, range, casting_time, duration, components, classes,
                  text, source=None, **kwargs):

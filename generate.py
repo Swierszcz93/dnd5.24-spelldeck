@@ -5,7 +5,7 @@ import sys
 import textwrap
 import json
 
-MAX_TEXT_LENGTH = 900
+MAX_TEXT_LENGTH = 950
 
 SPELLS_TRUNCATED = 0
 SPELLS_TOTAL = 0
@@ -28,20 +28,16 @@ with open('data/spells.json') as json_data:
     SPELLS = json.load(json_data)
 
 
-def truncate_string(text, max_len, name):
+def truncate_string(text, max_len, name, linesToCut):
     global SPELLS_TRUNCATED, TRUNKATED_NAMES
-    #zmienic zeby za kazde 30 znakow w compnentach ucinac linie w opisie test - Astral Projection
-    # i ogolnie popracowac nad tym wyswietlanime w roznych kombinacjach
-    full_lines = text[:max_len].count("\n\n")
-    max_len -= full_lines * 50
-    rv = text[:max_len] + (text[max_len-30:] and ' [MORE ABOUT SPELL IN BOOK]')
-
-    if rv != text:
+    max_len -= linesToCut * 40
+    if(len(text)> int(max_len * 1.5)):
+        text = "\\textbf{[Description cuted]}\\\\" +text[:int(max_len * 1.5)]
         SPELLS_TRUNCATED += 1
         TRUNKATED_NAMES += '\n %s' %name
-
-    rv = replace_text(rv)
-    return rv
+    if(len(text) > max_len):
+        text = "\\tiny "+ text
+    return text
 
 def replace_text(text):
     splittedText = text.split("\n")
@@ -55,6 +51,19 @@ def replace_text(text):
     newText = newText.replace("\n","\\\\")
     return newText
 
+def resize_name(name):
+    if len(name) > 36:
+        return "\\tiny " + name
+    elif len(name) > 32:
+        return "\\scriptsize " + name
+    elif len(name) > 28:
+        return "\\footnotesize " + name
+    elif len(name) > 24:
+        return "\\small " + name
+    elif len(name) > 20:
+        return "\\normalsize " + name
+    return name
+
 def print_spell(name, level, school, range, casting_time, duration, components, classes,
                  text, source=None, **kwargs):
     global SPELLS_TOTAL
@@ -64,7 +73,12 @@ def print_spell(name, level, school, range, casting_time, duration, components, 
     joinedClasses = '(%s)' % ", ".join(classes)
 
     header += ', %s' % source
-    new_text = truncate_string(text, MAX_TEXT_LENGTH - len(joinedComponents), name)
+
+    linesToCut = int(max(len(joinedComponents)/30,len(duration)/30)) + int(max(len(casting_time)/30,len(range)/30))
+    new_text = truncate_string(text, MAX_TEXT_LENGTH, name, linesToCut)
+    new_text = replace_text(new_text)
+    
+    name = resize_name(name)
 
     SPELLS_TOTAL += 1
 
@@ -126,4 +140,4 @@ if __name__ == '__main__':
         print_spell(name, **spell)
 
     print('Had to truncate %d out of %d spells at %d characters.' % (SPELLS_TRUNCATED, SPELLS_TOTAL, MAX_TEXT_LENGTH), file=sys.stderr)
-    #print('Trunkated spell names: %s' % (TRUNKATED_NAMES), file=sys.stderr)
+    print('Trunkated spell names: %s' % (TRUNKATED_NAMES), file=sys.stderr)

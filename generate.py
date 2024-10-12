@@ -5,7 +5,7 @@ import sys
 import textwrap
 import json
 
-MAX_TEXT_LENGTH = 950
+MAX_TEXT_LENGTH = 1100
 
 SPELLS_TRUNCATED = 0
 SPELLS_TOTAL = 0
@@ -144,6 +144,7 @@ if __name__ == '__main__':
 
 # spells to check
 # Animate Dead
+# Alter Self - wordin wyciete pare rzezy tmjaest
 # Animate Objects - cos dodac z ksiazki bo bieda
 # Antipathy/Simpathy - moze da sie rozszerzyc opis?
 #  Astral Projection

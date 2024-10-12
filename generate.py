@@ -169,3 +169,4 @@ if __name__ == '__main__':
 #  Telekinesis
 # Teleport - table in book
 #  Wall of Stone
+# overleaf.com - stronka

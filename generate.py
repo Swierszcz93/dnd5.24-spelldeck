@@ -143,13 +143,6 @@ if __name__ == '__main__':
     print('Trunkated spell names: %s' % (TRUNKATED_NAMES), file=sys.stderr)
 
 # spells to check
-# Animate Dead
-# Alter Self - wordin wyciete pare rzezy tmjaest
-# Animate Objects - cos dodac z ksiazki bo bieda
-# Antipathy/Simpathy - moze da sie rozszerzyc opis?
-#  Astral Projection
-# Confusion - cos z kiazki?
-# Control Weather - tableka z ksiazki?
 #  Create Undead
 # Creation - tableka z ksiazki
 # Divine Word - tableka z ksiazki
@@ -164,9 +157,15 @@ if __name__ == '__main__':
 # Prismatic Wall - tableka z ksiazki
 # Reincarnate - tabl book
 # Scrying - more in book
-#Summon Aberration, Beast, Celestial, Construct, Dragon, Elemental, Fey, Fiend, Undead
 #  Symbol
 #  Telekinesis
 # Teleport - table in book
 #  Wall of Stone
 # overleaf.com - stronka
+
+
+
+# Animate Objects - tabelka w booku
+# Confusion - tabelka
+# Control Weather - tableka z ksiazki?
+#Summon Aberration, Beast, Celestial, Construct, Dragon, Elemental, Fey, Fiend, Undead - tabelki

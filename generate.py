@@ -141,3 +141,30 @@ if __name__ == '__main__':
 
     print('Had to truncate %d out of %d spells at %d characters.' % (SPELLS_TRUNCATED, SPELLS_TOTAL, MAX_TEXT_LENGTH), file=sys.stderr)
     print('Trunkated spell names: %s' % (TRUNKATED_NAMES), file=sys.stderr)
+
+# spells to check
+# Animate Dead
+# Animate Objects - cos dodac z ksiazki bo bieda
+# Antipathy/Simpathy - moze da sie rozszerzyc opis?
+#  Astral Projection
+# Confusion - cos z kiazki?
+# Control Weather - tableka z ksiazki?
+#  Create Undead
+# Creation - tableka z ksiazki
+# Divine Word - tableka z ksiazki
+#  Find Familiar
+#  Guards and Wards
+#  Magic Jar
+#  Major Image
+#  Modify Memory
+#  Mordenkainen's Magnificent Mansion
+#  Planar Ally
+# Prismatic Spray - tableka z ksiazki
+# Prismatic Wall - tableka z ksiazki
+# Reincarnate - tabl book
+# Scrying - more in book
+#Summon Aberration, Beast, Celestial, Construct, Dragon, Elemental, Fey, Fiend, Undead
+#  Symbol
+#  Telekinesis
+# Teleport - table in book
+#  Wall of Stone

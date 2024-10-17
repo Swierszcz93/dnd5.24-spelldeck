@@ -152,7 +152,6 @@ if __name__ == '__main__':
 #  Magic Jar
 #  Major Image
 #  Modify Memory
-#  Mordenkainen's Magnificent Mansion
 #  Planar Ally
 # Prismatic Spray - tableka z ksiazki
 # Prismatic Wall - tableka z ksiazki

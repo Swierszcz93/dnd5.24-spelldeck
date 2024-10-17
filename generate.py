@@ -32,9 +32,9 @@ def truncate_string(text, max_len, name, linesToCut):
     global SPELLS_TRUNCATED, TRUNKATED_NAMES
     max_len -= linesToCut * 40
     if(len(text)> int(max_len * 1.5)):
-        text = "\\textbf{[Description cuted]}\\\\" +text[:int(max_len * 1.5)]
+        TRUNKATED_NAMES += '\n %s %d' %(name, len(text))
+        text = "\\textbf{[Description cuted]}\\\\" + text[:int(max_len * 1.5)]
         SPELLS_TRUNCATED += 1
-        TRUNKATED_NAMES += '\n %s' %name
     if(len(text) > max_len):
         text = "\\tiny "+ text
     return text
@@ -157,10 +157,8 @@ if __name__ == '__main__':
 # Prismatic Wall - tableka z ksiazki
 # Reincarnate - tabl book
 # Scrying - more in book
-#  Symbol
 #  Telekinesis
 # Teleport - table in book
-#  Wall of Stone
 # overleaf.com - stronka
 
 

@@ -150,8 +150,6 @@ if __name__ == '__main__':
 #  Magic Jar
 #  Modify Memory
 #  Planar Ally
-# Prismatic Wall - tableka z ksiazki
-# Reincarnate - tabl book
 # Scrying - more in book
 # Teleport - table in book
 # overleaf.com - stronka

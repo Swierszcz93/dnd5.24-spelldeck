@@ -157,7 +157,6 @@ if __name__ == '__main__':
 # Prismatic Wall - tableka z ksiazki
 # Reincarnate - tabl book
 # Scrying - more in book
-#  Telekinesis
 # Teleport - table in book
 # overleaf.com - stronka
 

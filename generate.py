@@ -145,13 +145,11 @@ if __name__ == '__main__':
     print('Trunkated spell names: %s' % (TRUNKATED_NAMES), file=sys.stderr)
 
 # spells to check
-# Divine Word - tableka z ksiazki
 #  Find Familiar
 #  Guards and Wards
 #  Magic Jar
 #  Modify Memory
 #  Planar Ally
-# Scrying - more in book
 # overleaf.com - stronka
 
 # Meld into Stone - nie miesci sie

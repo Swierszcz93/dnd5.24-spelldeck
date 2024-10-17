@@ -151,5 +151,3 @@ if __name__ == '__main__':
 #  Modify Memory
 #  Planar Ally
 # overleaf.com - stronka
-
-# Meld into Stone - nie miesci sie

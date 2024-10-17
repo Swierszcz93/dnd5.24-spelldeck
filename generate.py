@@ -161,7 +161,3 @@ if __name__ == '__main__':
 # Teleport - table in book
 # overleaf.com - stronka
 
-
-
-# Animate Objects - tabelka w booku
-# Confusion - tabelka

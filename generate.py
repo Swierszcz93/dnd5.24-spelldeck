@@ -144,8 +144,6 @@ if __name__ == '__main__':
     print('Trunkated spell names: %s' % (TRUNKATED_NAMES), file=sys.stderr)
 
 # spells to check
-#  Create Undead
-# Creation - tableka z ksiazki
 # Divine Word - tableka z ksiazki
 #  Find Familiar
 #  Guards and Wards

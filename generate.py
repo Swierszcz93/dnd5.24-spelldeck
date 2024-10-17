@@ -49,7 +49,8 @@ def replace_text(text):
         newText += "\n" + subText
 
     newText = newText.replace("\n","\\\\")
-    newText = newText.replace("[STAT BLOCK IN BOOK]", "\\begin{center} \\textbf{[STAT BLOCK IN BOOK]} \\end{center}")
+    newText = newText.replace("[STAT BLOCK IN THE SOURCE]", "\\begin{center} \\textbf{[STAT BLOCK IN THE SOURCE]} \\end{center}")
+    newText = newText.replace("[MORE DETAILS IN THE SOURCE]", "\\begin{center} \\textbf{[MORE DETAILS IN THE SOURCE]} \\end{center}")
     return newText
 
 def resize_name(name):
@@ -151,7 +152,6 @@ if __name__ == '__main__':
 #  Modify Memory
 #  Planar Ally
 # Scrying - more in book
-# Teleport - table in book
 # overleaf.com - stronka
 
 # Meld into Stone - nie miesci sie

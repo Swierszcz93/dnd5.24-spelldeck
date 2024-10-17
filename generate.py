@@ -148,13 +148,12 @@ if __name__ == '__main__':
 #  Find Familiar
 #  Guards and Wards
 #  Magic Jar
-#  Major Image
 #  Modify Memory
 #  Planar Ally
-# Prismatic Spray - tableka z ksiazki
 # Prismatic Wall - tableka z ksiazki
 # Reincarnate - tabl book
 # Scrying - more in book
 # Teleport - table in book
 # overleaf.com - stronka
 
+# Meld into Stone - nie miesci sie

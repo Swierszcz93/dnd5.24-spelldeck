@@ -49,6 +49,7 @@ def replace_text(text):
         newText += "\n" + subText
 
     newText = newText.replace("\n","\\\\")
+    newText = newText.replace("[STAT BLOCK IN BOOK]", "\\begin{center} \\textbf{[STAT BLOCK IN BOOK]} \\end{center}")
     return newText
 
 def resize_name(name):
@@ -164,5 +165,3 @@ if __name__ == '__main__':
 
 # Animate Objects - tabelka w booku
 # Confusion - tabelka
-# Control Weather - tableka z ksiazki?
-#Summon Aberration, Beast, Celestial, Construct, Dragon, Elemental, Fey, Fiend, Undead - tabelki

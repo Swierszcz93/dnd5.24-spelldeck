@@ -145,7 +145,6 @@ if __name__ == '__main__':
     print('Trunkated spell names: %s' % (TRUNKATED_NAMES), file=sys.stderr)
 
 # spells to check
-#  Planar Ally
 # overleaf.com - stronka
 
 # Glyph of Warding - chyb zmniejszyc i dodac opisy, samo sie zmniejszy jak dodam opisy

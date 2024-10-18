@@ -145,7 +145,6 @@ if __name__ == '__main__':
     print('Trunkated spell names: %s' % (TRUNKATED_NAMES), file=sys.stderr)
 
 # spells to check
-#  Modify Memory
 #  Planar Ally
 # overleaf.com - stronka
 

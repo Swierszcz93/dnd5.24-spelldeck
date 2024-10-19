@@ -147,8 +147,6 @@ if __name__ == '__main__':
 # spells to check
 # overleaf.com - stronka
 
-#earthquake - dodac teskt
-# find steed - dodac entery, dodac info ze statsy w source są
 # Giant Insect - literowka "creaturedisappears" info o statblocku w source
 # Glyph of Warding -  dodac opisy
 # greater restoration - moze myslniki zeby odzielic efekty?

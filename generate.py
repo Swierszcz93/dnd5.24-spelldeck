@@ -147,11 +147,6 @@ if __name__ == '__main__':
 # spells to check
 # overleaf.com - stronka
 
-# Giant Insect - literowka "creaturedisappears" info o statblocku w source
-# Glyph of Warding -  dodac opisy
-# greater restoration - moze myslniki zeby odzielic efekty?
-# hallow wiecej info w source
-# Imprisonment - more in source
 # Storm of Vengeance - zmniejszyc albo dodac test, bo wystaje
 #symbol - sprawdzic czy wszytko sie zmiescilo
 # true prymorph - dodac tekst

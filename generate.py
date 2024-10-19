@@ -147,8 +147,6 @@ if __name__ == '__main__':
 # spells to check
 # overleaf.com - stronka
 
-# control water - dodac teskt
-#Detect Thoughts - doda tekst
 # Dispel Evil and Good - dadac entery
 #diivne word - table na values below
 # Dragon’s Breath - enter przeed using higher level slot

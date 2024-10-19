@@ -143,8 +143,5 @@ if __name__ == '__main__':
 
     print('Had to truncate %d out of %d spells at %d characters.' % (SPELLS_TRUNCATED, SPELLS_TOTAL, MAX_TEXT_LENGTH), file=sys.stderr)
     print('Trunkated spell names: %s' % (TRUNKATED_NAMES), file=sys.stderr)
-
-# spells to check
+    
 # overleaf.com - stronka
-
-#wish - daodac ze wiecej w zrodle

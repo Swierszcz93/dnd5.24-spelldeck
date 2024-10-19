@@ -147,9 +147,6 @@ if __name__ == '__main__':
 # spells to check
 # overleaf.com - stronka
 
-# Dispel Evil and Good - dadac entery
-#diivne word - table na values below
-# Dragon’s Breath - enter przeed using higher level slot
 #earthquake - dodac teskt
 # find steed - dodac entery, dodac info ze statsy w source są
 # Giant Insect - literowka "creaturedisappears" info o statblocku w source

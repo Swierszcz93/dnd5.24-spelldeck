@@ -147,7 +147,4 @@ if __name__ == '__main__':
 # spells to check
 # overleaf.com - stronka
 
-# Storm of Vengeance - zmniejszyc albo dodac test, bo wystaje
-#symbol - sprawdzic czy wszytko sie zmiescilo
-# true prymorph - dodac tekst
 #wish - daodac ze wiecej w zrodle

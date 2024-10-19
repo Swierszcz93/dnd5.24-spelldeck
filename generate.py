@@ -147,4 +147,21 @@ if __name__ == '__main__':
 # spells to check
 # overleaf.com - stronka
 
-# Glyph of Warding - chyb zmniejszyc i dodac opisy, samo sie zmniejszy jak dodam opisy
+# bigbys hand - dodac opisy
+# conjure celestial - doac opisy
+# control water - dodac teskt
+#Detect Thoughts - doda tekst
+# Dispel Evil and Good - dadac entery
+#diivne word - table na values below
+# Dragon’s Breath - enter przeed using higher level slot
+#earthquake - dodac teskt
+# find steed - dodac entery, dodac info ze statsy w source są
+# Giant Insect - literowka "creaturedisappears" info o statblocku w source
+# Glyph of Warding -  dodac opisy
+# greater restoration - moze myslniki zeby odzielic efekty?
+# hallow wiecej info w source
+# Imprisonment - more in source
+# Storm of Vengeance - zmniejszyc albo dodac test, bo wystaje
+#symbol - sprawdzic czy wszytko sie zmiescilo
+# true prymorph - dodac tekst
+#wish - daodac ze wiecej w zrodle

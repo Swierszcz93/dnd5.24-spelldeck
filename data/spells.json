@@ -296,7 +296,7 @@
             "V", "S", "M (specially marked sticks, bones, cards, or other divinatory tokens worth 25+ GP)"
         ],
         "duration": "Instantaneous",
-        "text": "You receive an omen from an otherworldly entity about the results of a course of action that you plan to take within the next 30 minutes. The DM chooses the omen from the Omens table. \nWeal - good \nWoe - Bad \nWeal and woe - Good and bad \nIndifference - Neither good nor bad \nThe spell doesn't account for circumstances, such as other spells, that might change the results. If you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.",
+        "text": "You receive an omen from an otherworldly entity about the results of a course of action that you plan to take within the next 30 minutes. The DM chooses the omen from the values below. \nWeal - good \nWoe - Bad \nWeal and woe - Good and bad \nIndifference - Neither good nor bad \nThe spell doesn't account for circumstances, such as other spells, that might change the results. If you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.",
         "source": "PHB 244"
     },
     "Aura of Life": {
@@ -1169,7 +1169,7 @@
         "text": "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell, and it ends early if you go indoors. When you cast the spell, you change the current weather conditions, which are determined by the DM. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal. When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction. \nPrecipitation. 1 - Clear, 2 - Light clouds, 3 - Overcast or ground fog, 4 - Rain, hail, or snow, 5 - Torrential rain, driving hail, or blizzard \nTemperature. 1 - Heat wave, 2 - Hot, 3 - Warm, 4 - Cool, 5 - Cold, 6 - Freezing \nWind. 1 - Calm, 2 - Moderate wind, 3 - Strong wind, 4 - Gale, 5 - Storm",
         "source": "PHB 257"
     },
-    "Control of Arrows": {
+    "Cordon of Arrows": {
         "level": 2,
         "school": "Transmutation",
         "classes": [

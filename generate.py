@@ -147,8 +147,6 @@ if __name__ == '__main__':
 # spells to check
 # overleaf.com - stronka
 
-# bigbys hand - dodac opisy
-# conjure celestial - doac opisy
 # control water - dodac teskt
 #Detect Thoughts - doda tekst
 # Dispel Evil and Good - dadac entery
